@@ -3,6 +3,7 @@ package edu.cmu.lyricfinder;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     private void searchLyrics(String songName, String artistName){
         String apiKey = "4794d71e3256361ba03a768912556bc9";
         String url = "https://api.vagalume.com.br/search.php?art="+artistName+"&mus="+songName+"&apikey="+apiKey;
-//        String url = "http://localhost:8080/getLyrics?artistName="+artistName+"&songName="+songName;
+//        String url = "http://localhost:8080/getLyrics?artistName="+artistName+"&songName="+songName+"&phoneBrand="+Build.BRAND+"&phoneDevice="+Build.DEVICE;
 
         RequestQueue volleyQueue = Volley.newRequestQueue(MainActivity.this);
 
